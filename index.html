@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function getQueryString(name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+      var r = window.location.search.substr(1).match(reg)
+      console.log(r)
+      if (r != null) return unescape(r[2])
+      return null
+    }
+    var openId = getQueryString('openid')
+    localStorage.setItem("openid", openId)
+    alert(11)
+    console.log(openId)
+  </script>
+</head>
+
+<body>
+  <div>
+    <div id="left">0</div>
+    <div id="right">0</div>
+  </div>
+</body>
+<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+<script>
+  function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+    var r = window.location.search.substr(1).match(reg)
+    console.log(r)
+    if (r != null) return unescape(r[2])
+    return null
+  }
+  var openId = getQueryString('openid')
+  localStorage.setItem("openid", openId)
+  $('#left').onkeydown = function (e) {
+    var e = e || event;
+    if (e.keyCode = 87) {
+
+    }
+  }
+  $('#left').on('click', function () {
+  })
+</script>
+
+</html>
